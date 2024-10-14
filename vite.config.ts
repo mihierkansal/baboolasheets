@@ -8,4 +8,7 @@ export default defineConfig({
     port: 3002,
     hmr: true,
   },
+  css: {
+    postcss: "./postcss.config.js",
+  },
 });

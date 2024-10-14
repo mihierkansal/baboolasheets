@@ -3,5 +3,44 @@
 @tailwind utilities;
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  @apply text-3xl;
+  @apply bg-slate-200;
+  @apply dark:bg-slate-950;
+  @apply dark:text-white;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+
+  background: none;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply the animation to the element */
+.loader {
+  display: inline-block;
+  height: 1rem;
+  margin-left: 0.125rem;
+  margin-right: 0.25rem;
+  width: 1rem;
+  border: 3px solid transparent;
+  border-top: 3px solid #3498db;
+  border-left: 3px solid #1569a1;
+  border-bottom: 3px solid #074269;
+  border-right: 3px solid #012a45;
+  border-radius: 50px;
+  animation: spin 0.7s linear infinite;
+}
+h1 {
+  @apply text-3xl font-semibold;
+}
+html {
+  height: 100vh;
 }

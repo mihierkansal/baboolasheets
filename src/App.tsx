@@ -1,5 +1,5 @@
 import { Sheets } from "./Sheets";
-
+import "../index.css";
 function App() {
   return (
     <>
